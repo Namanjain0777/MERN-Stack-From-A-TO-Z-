@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Media</title>
+
+    <!-- Responsive support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- HTML MEDIA -->
+<!-- ================================================= -->
+
+<p>
+HTML Media is used to display video, audio, and external media
+on a webpage.
+</p>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML VIDEO -->
+<!-- ================================================= -->
+
+<h2>HTML Video</h2>
+
+<video 
+    width="320" 
+    height="240" 
+    controls
+>
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+
+    <!-- Fallback text -->
+    Your browser does not support the video tag.
+</video>
+
+<!--
+controls → play, pause, volume
+autoplay → starts automatically
+muted → muted sound
+loop → repeats video
+-->
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML AUDIO -->
+<!-- ================================================= -->
+
+<h2>HTML Audio</h2>
+
+<audio controls>
+    <source src="sound.mp3" type="audio/mpeg">
+    <source src="sound.ogg" type="audio/ogg">
+
+    <!-- Fallback text -->
+    Your browser does not support the audio element.
+</audio>
+
+<!--
+controls → play/pause
+autoplay → auto play
+loop → repeat audio
+-->
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML PLUG-INS -->
+<!-- ================================================= -->
+
+<h2>HTML Plug-ins</h2>
+
+<!-- Object element -->
+<object 
+    data="example.pdf" 
+    type="application/pdf"
+    width="300" 
+    height="200">
+</object>
+
+<!-- Embed element -->
+<embed 
+    src="example.pdf"
+    type="application/pdf"
+    width="300"
+    height="200"
+>
+
+<!--
+<object> and <embed> are used to include:
+✔ PDFs
+✔ Flash (deprecated)
+✔ External resources
+-->
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML YOUTUBE VIDEO -->
+<!-- ================================================= -->
+
+<h2>YouTube Video</h2>
+
+<iframe 
+    width="420"
+    height="315"
+    src="https://www.youtube.com/embed/tgbNymZ7vqY"
+    title="YouTube video player"
+    frameborder="0"
+    allowfullscreen>
+</iframe>
+
+<!--
+YouTube embedding uses iframe
+/embed/VIDEO_ID format
+-->
+
+<hr>
+
+<!-- ================================================= -->
+<!-- SUMMARY -->
+<!-- ================================================= -->
+
+<p><strong>Video</strong> → Shows videos</p>
+<p><strong>Audio</strong> → Plays sound</p>
+<p><strong>Plug-ins</strong> → External content</p>
+<p><strong>YouTube</strong> → Embedded using iframe</p>
+
+<pre>
+    Video & Audio
+
+        <video> → shows video
+
+        <audio> → plays sound
+
+        <source> → multiple formats
+
+        controls → user control
+
+Plug-ins
+
+        <object> → external resources
+
+        <embed> → simpler plugin embed
+
+YouTube
+
+        Uses <iframe>
+
+        /embed/VIDEO_ID
+</pre>
+</body>
+</html>

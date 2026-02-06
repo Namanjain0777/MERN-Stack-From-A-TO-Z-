@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML APIs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<h1>HTML APIs</h1>
+
+<!-- ================================================= -->
+<!-- HTML WEB APIs -->
+<!-- ================================================= -->
+
+<p>
+HTML Web APIs allow browsers to provide extra functionality
+like storage, geolocation, drag & drop, workers, etc.
+</p>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML GEOLOCATION API -->
+<!-- ================================================= -->
+
+<h2>HTML Geolocation</h2>
+
+<button onclick="getLocation()">Get My Location</button>
+
+<p id="location"></p>
+
+<script>
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        document.getElementById("location").innerHTML =
+            "Geolocation is not supported.";
+    }
+}
+
+function showPosition(position) {
+    document.getElementById("location").innerHTML =
+        "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+<!-- Uses GPS / network to get user location -->
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML DRAG AND DROP -->
+<!-- ================================================= -->
+
+<h2>HTML Drag and Drop</h2>
+
+<p>Drag the image into the box:</p>
+
+<div
+    id="dropBox"
+    ondrop="drop(event)"
+    ondragover="allowDrop(event)"
+    style="width:200px;height:120px;border:1px solid black;">
+</div>
+
+<br>
+
+<img
+    id="dragItem"
+    src="https://www.w3schools.com/html/img_logo.gif"
+    draggable="true"
+    ondragstart="drag(event)"
+    width="150">
+
+<script>
+function allowDrop(event) {
+    event.preventDefault();
+}
+
+function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
+}
+
+function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text");
+    event.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<!-- Allows dragging elements on the page -->
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML WEB STORAGE -->
+<!-- ================================================= -->
+
+<h2>HTML Web Storage</h2>
+
+<button onclick="saveData()">Save Data</button>
+<button onclick="loadData()">Load Data</button>
+
+<p id="storage"></p>
+
+<script>
+function saveData() {
+    localStorage.setItem("username", "Naman");
+}
+
+function loadData() {
+    document.getElementById("storage").innerHTML =
+        localStorage.getItem("username");
+}
+</script>
+
+<!--
+localStorage → permanent storage
+sessionStorage → cleared on tab close
+-->
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML WEB WORKERS -->
+<!-- ================================================= -->
+
+<h2>HTML Web Workers</h2>
+
+<button onclick="startWorker()">Start Worker</button>
+
+<p id="workerResult"></p>
+
+<script>
+var worker;
+
+function startWorker() {
+    if (typeof(Worker) !== "undefined") {
+        if (!worker) {
+            worker = new Worker("worker.js");
+        }
+        worker.onmessage = function(event) {
+            document.getElementById("workerResult").innerHTML =
+                event.data;
+        };
+    } else {
+        document.getElementById("workerResult").innerHTML =
+            "Web Workers not supported.";
+    }
+}
+</script>
+
+<!--
+Web Workers:
+✔ Run scripts in background
+✔ Do not block UI
+-->
+
+<!-- NOTE:
+worker.js file example:
+--------------------------------
+let i = 0;
+setInterval(() => {
+    i++;
+    postMessage(i);
+}, 1000);
+--------------------------------
+-->
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML SSE (SERVER-SENT EVENTS) -->
+<!-- ================================================= -->
+
+<h2>HTML SSE (Server-Sent Events)</h2>
+
+<p id="sse"></p>
+
+<script>
+if (typeof(EventSource) !== "undefined") {
+    var source = new EventSource("sse.php");
+
+    source.onmessage = function(event) {
+        document.getElementById("sse").innerHTML =
+            event.data;
+    };
+} else {
+    document.getElementById("sse").innerHTML =
+        "SSE not supported.";
+}
+</script>
+
+<!--
+SSE:
+✔ Server pushes data automatically
+✔ One-way communication
+-->
+
+<!-- Example server output (sse.php):
+------------------------------------
+data: Server time update
+------------------------------------
+-->
+
+<pre>
+    API	          Use
+Geolocation	      Get user location
+Drag & Drop       Move elements
+Web Storage	      Save data in browser
+Web Workers	      Background tasks
+SSE	              Server → browser updates
+</pre>
+</body>
+</html>

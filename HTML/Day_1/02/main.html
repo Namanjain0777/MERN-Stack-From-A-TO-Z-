@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Graphics</title>
+
+    <!-- Responsive support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- HTML GRAPHICS -->
+<!-- ================================================= -->
+
+<p>
+HTML Graphics allow drawing shapes and images using
+<strong>Canvas</strong> and <strong>SVG</strong>.
+</p>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML CANVAS -->
+<!-- ================================================= -->
+
+<canvas 
+    id="myCanvas"
+    width="300"
+    height="150"
+    style="border:1px solid black;">
+</canvas>
+<!--
+Canvas:
+✔ Pixel-based
+✔ Drawn using JavaScript
+✔ Best for games & animations
+-->
+
+<script>
+    // Get canvas context
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Draw a rectangle
+    ctx.fillStyle = "lightblue";
+    ctx.fillRect(20, 20, 100, 50);
+
+    // Draw text
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "black";
+    ctx.fillText("Canvas Text", 20, 100);
+</script>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML SVG -->
+<!-- ================================================= -->
+
+<!-- SVG Rectangle -->
+<svg width="300" height="150" style="border:1px solid black;">
+    <rect 
+        x="20" 
+        y="20" 
+        width="100" 
+        height="50"
+        fill="orange"
+    />
+    <!-- Vector rectangle -->
+</svg>
+
+<br><br>
+
+<!-- SVG Circle -->
+<svg width="200" height="120">
+    <circle 
+        cx="60" 
+        cy="60" 
+        r="40"
+        fill="green"
+    />
+</svg>
+
+<br><br>
+
+<!-- SVG Text -->
+<svg width="300" height="100">
+    <text 
+        x="10" 
+        y="40"
+        fill="blue">
+        SVG Text Example
+    </text>
+</svg>
+
+<!--
+SVG:
+✔ Vector-based
+✔ No JavaScript required
+✔ Scales without losing quality
+-->
+
+<hr>
+
+<!-- ================================================= -->
+<!-- CANVAS vs SVG -->
+<!-- ================================================= -->
+
+<p><strong>Canvas</strong>: Pixel-based, drawn with JavaScript.</p>
+<p><strong>SVG</strong>: Vector-based, defined in HTML.</p>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms</title>
+
+    <!-- UTF-8 + Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- HTML FORM -->
+<!-- ================================================= -->
+
+<form 
+    action="submit.html" 
+    method="post"
+    target="_self"
+    autocomplete="on"
+>
+<!-- 
+action     → where form data is sent
+method     → get / post
+target     → where to open response
+autocomplete → browser auto-fill
+-->
+
+<h2>HTML Form Example</h2>
+
+<!-- ================================================= -->
+<!-- FORM ELEMENTS -->
+<!-- ================================================= -->
+
+<!-- Label + Input -->
+<label for="name">Name:</label>
+<input type="text" id="name" name="username">
+<br><br>
+
+<!-- Password -->
+<label for="pass">Password:</label>
+<input type="password" id="pass" name="password">
+<br><br>
+
+<!-- Email -->
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+<br><br>
+
+<!-- Number -->
+<label for="age">Age:</label>
+<input type="number" id="age" name="age">
+<br><br>
+
+<!-- Radio Buttons -->
+<p>Gender:</p>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
+<br><br>
+
+<!-- Checkboxes -->
+<p>Skills:</p>
+<input type="checkbox" name="skill" value="html"> HTML
+<input type="checkbox" name="skill" value="css"> CSS
+<input type="checkbox" name="skill" value="js"> JavaScript
+<br><br>
+
+<!-- Select Dropdown -->
+<label for="country">Country:</label>
+<select id="country" name="country">
+    <option>India</option>
+    <option>USA</option>
+    <option>UK</option>
+</select>
+<br><br>
+
+<!-- Textarea -->
+<label for="message">Message:</label><br>
+<textarea id="message" name="message" rows="4" cols="30"></textarea>
+<br><br>
+
+<!-- File Upload -->
+<label for="file">Upload File:</label>
+<input type="file" id="file" name="file">
+<br><br>
+
+<!-- ================================================= -->
+<!-- INPUT TYPES -->
+<!-- ================================================= -->
+
+<input type="date"><br><br>
+<input type="time"><br><br>
+<input type="color"><br><br>
+<input type="range"><br><br>
+<input type="url"><br><br>
+<input type="tel"><br><br>
+<input type="search"><br><br>
+<input type="hidden" value="hiddenData">
+
+<!-- ================================================= -->
+<!-- INPUT ATTRIBUTES -->
+<!-- ================================================= -->
+
+<input 
+    type="text"
+    placeholder="Enter your name"
+    required
+    readonly
+>
+<!-- 
+placeholder → hint text
+required    → mandatory field
+readonly    → cannot edit
+-->
+
+<br><br>
+
+<input 
+    type="number"
+    min="18"
+    max="60"
+    step="1"
+>
+<!-- 
+min, max → allowed range
+step     → jump value
+-->
+
+<br><br>
+
+<input 
+    type="text"
+    value="Default Value"
+    disabled
+>
+<!-- disabled → input not usable -->
+
+<br><br>
+
+<!-- ================================================= -->
+<!-- FORM-LEVEL ATTRIBUTES -->
+<!-- ================================================= -->
+
+<input type="submit" value="Submit Form">
+<input type="reset" value="Reset Form">
+
+</form>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- INPUT FORM ATTRIBUTES (OUTSIDE FORM) -->
+<!-- ================================================= -->
+
+<input 
+    type="text"
+    form="myForm"
+    placeholder="Input outside form"
+>
+
+<!-- ================================================= -->
+<!-- FORM ATTRIBUTE EXAMPLE -->
+<!-- ================================================= -->
+
+<form id="myForm">
+    <input type="text" name="test">
+</form>
+
+</body>
+</html>

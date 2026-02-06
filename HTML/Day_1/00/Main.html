@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<!-- Tells the browser this document follows HTML5 rules -->
+
+<html lang="en">
+<!-- Root element of the HTML page | Language is English -->
+
+<head>
+    <!-- Head contains metadata (not visible on the webpage) -->
+
+    <meta charset="UTF-8">
+    <!-- Character encoding (supports all languages & emojis) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the webpage responsive on all devices -->
+
+    <title>First Webpage</title>
+    <!-- Title shown on browser tab -->
+</head>
+
+<body>
+    <!-- Body contains all visible content -->
+
+    <!-- ================= HEADINGS ================= -->
+    <h1>My First Heading</h1>
+    <h2>Sub Heading</h2>
+    <h3>Smaller Heading</h3>
+
+    <!-- ================= PARAGRAPH ================= -->
+    <p>My first paragraph.</p>
+
+    <!-- Line break (empty element, no closing tag) -->
+    <br>
+
+    <!-- HTML is not case sensitive (but lowercase is best practice) -->
+    <P>Its not case sensitive</P>
+
+    <!-- ================= LINKS ================= -->
+    <a href="https://www.google.com">Google</a>
+    <!-- Anchor tag with href attribute -->
+
+    <!-- ================= IMAGES ================= -->
+
+    <!-- Local image -->
+    <img src="img.png" alt="Image not found">
+    <!-- alt text appears if image fails to load -->
+
+    <!-- Online image with width & height -->
+    <img src="https://www.w3schools.com/images/img_girl.jpg" width="300" height="400" alt="Girl Image">
+
+    <!-- ================= INLINE STYLES ================= -->
+    <p style="color: red;">
+        This paragraph uses inline CSS
+    </p>
+
+    <!-- ================= ATTRIBUTES ================= -->
+    <h3>Always Quote Attribute Values</h3>
+    <p title="Description of W3Schools">
+        Hover over this text
+    </p>
+
+    <!-- ================= TEXT FORMATTING ================= -->
+
+    <b>Bold text</b><br>
+    <strong>Important text</strong><br>
+    <i>Italic text</i><br>
+    <em>Emphasized text</em><br>
+    <small>Smaller text</small>
+
+    <p>
+        Do not forget to buy <mark>milk</mark> today.
+    </p>
+
+    <p>
+        My favorite color is <del>blue</del> red.
+    </p>
+
+    <p>
+        This is <sub>subscript</sub> text and
+        this is <sup>superscript</sup> text.
+    </p>
+
+    <!-- ================= PRESERVE FORMATTING ================= -->
+
+    <!-- Normal paragraph ignores line breaks -->
+    <p>
+        My Bonnie lies over the ocean.
+        My Bonnie lies over the sea.
+    </p>
+
+    <!-- Pre tag preserves spaces & line breaks -->
+    <pre>
+My Bonnie lies over the ocean.
+My Bonnie lies over the sea.
+    </pre>
+
+    <!-- ================= QUOTATIONS ================= -->
+
+    <p>Quote from WWF website:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        WWF works to help people and nature thrive.
+    </blockquote>
+
+    <p>
+        WWF's goal is:
+        <q>Build a future where people live in harmony with nature.</q>
+    </p>
+
+    <!-- ================= ABBREVIATIONS ================= -->
+    <p>
+        <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+    </p>
+
+    <!-- ================= ADDRESS ================= -->
+    <address>
+        Written by John Doe.<br>
+        Visit us at Example.com<br>
+        USA
+    </address>
+
+    <!-- ================= CITATION ================= -->
+    <p>
+        <cite>The Scream</cite> by Edvard Munch.
+    </p>
+
+    <!-- ================= TEXT DIRECTION ================= -->
+    <bdo dir="rtl">
+        This text is written from right to left
+    </bdo>
+
+    <!-- ================= CSS COLOR FORMATS ================= -->
+
+    <!-- RGBA color format -->
+    <p>rgba(red, green, blue, alpha)</p>
+    <!-- 
+red, green, blue → values between 0–255
+alpha → transparency (0.0 = fully transparent, 1.0 = fully visible)
+-->
+
+    <p>
+        Alpha parameter is a number between 0.0 (fully transparent)
+        and 1.0 (not transparent at all)
+    </p>
+
+    <!-- HEX color format -->
+    <p>#rrggbb</p>
+    <!-- 
+rr → red value (00–ff)
+gg → green value (00–ff)
+bb → blue value (00–ff)
+Hexadecimal values range from 0–255
+-->
+
+    <p>
+        Where rr (red), gg (green) and bb (blue)
+        are hexadecimal values between 00 and ff
+    </p>
+
+    <!-- HSL color format -->
+    <p>hsl(hue, saturation, lightness)</p>
+    <!-- 
+Hue → color type (0–360)
+Saturation → color intensity (%)
+Lightness → brightness (%)
+-->
+
+    <p>
+        Hue is a degree on the color wheel from 0 to 360.<br>
+        0 is red, 120 is green, and 240 is blue.<br><br>
+
+        Saturation is a percentage value.<br>
+        0% means a shade of gray, and 100% is the full color.<br><br>
+
+        Lightness is also a percentage value.<br>
+        0% is black, and 100% is white.
+    </p>
+
+    <!-- HSLA color format -->
+    <p>HSLA Color Values</p>
+    <!-- 
+HSLA = HSL + Alpha (transparency)
+Works same as RGBA but with HSL colors
+-->
+
+<!-- ================= BASIC ANCHOR TAG ================= -->
+
+<a href="url">Link Text</a>
+<!-- 
+<a> = anchor tag
+href = destination URL
+-->
+
+<!-- ================= TARGET ATTRIBUTE ================= -->
+
+<!-- Opens link in the same tab (DEFAULT behavior) -->
+<!-- target="_self" -->
+<a href="https://www.w3schools.com/" target="_self">
+    Open in Same Tab
+</a>
+
+<!-- Opens link in a new tab -->
+<a href="https://www.w3schools.com/" target="_blank">
+    Open in New Tab
+</a>
+
+<!-- Opens link in parent frame -->
+<!-- Mostly used with frames -->
+<a href="https://www.w3schools.com/" target="_parent">
+    Open in Parent Frame
+</a>
+
+<!-- Opens link in full browser window -->
+<a href="https://www.w3schools.com/" target="_top">
+    Open in Full Window
+</a>
+
+<hr>
+
+<!-- ================= IMAGE AS A LINK ================= -->
+
+<a href="default.asp">
+    <img 
+        src="smiley.gif" 
+        alt="HTML Tutorial"
+        style="width:42px; height:42px;"
+    >
+</a>
+<!-- Clicking the image works like clicking a link -->
+
+<hr>
+
+<!-- ================= EMAIL LINK ================= -->
+
+<a href="mailto:someone@example.com">
+    Send Email
+</a>
+<!-- Opens user's email app -->
+
+<hr>
+
+<!-- ================= BUTTON AS LINK ================= -->
+
+<button onclick="document.location='default.asp'">
+    HTML Tutorial
+</button>
+<!-- JavaScript used to redirect on button click -->
+
+<hr>
+
+<!-- ================= TITLE ATTRIBUTE ================= -->
+
+<a 
+   href="https://www.w3schools.com/html/" 
+   title="Go to W3Schools HTML section">
+   Visit our HTML Tutorial
+</a>
+<!-- title shows tooltip on hover -->
+
+<hr>
+
+<!-- ================= RELATIVE vs ABSOLUTE URL ================= -->
+
+<!-- Absolute URL (full website address) -->
+<a href="https://www.w3schools.com/html/">
+    HTML Tutorial (Absolute URL)
+</a>
+
+<!-- Relative URL (same website) -->
+<a href="/html/default.asp">
+    HTML Tutorial (Relative URL)
+</a>
+
+<a href="default.asp">
+    HTML Tutorial (Relative URL)
+</a>
+
+<hr>
+
+<!-- ================= BOOKMARK / JUMP LINK ================= -->
+
+<h2 id="C4">Chapter 4</h2>
+<!-- id used as a bookmark -->
+
+<a href="#C4">
+    Jump to Chapter 4
+</a>
+<!-- Clicking jumps to element with id="C4" -->
+
+<hr>
+
+<!-- ================= IMAGE MAP ================= -->
+
+<img 
+    src="workplace.jpg" 
+    alt="Workplace" 
+    usemap="#workmap"
+>
+
+<map name="workmap">
+    <!-- Rectangular clickable area -->
+    <area 
+        shape="rect" 
+        coords="34,44,270,350" 
+        alt="Computer" 
+        href="computer.htm"
+    >
+
+    <!-- Rectangular clickable area -->
+    <area 
+        shape="rect" 
+        coords="290,172,333,250" 
+        alt="Phone" 
+        href="phone.htm"
+    >
+
+    <!-- Circular clickable area -->
+    <area 
+        shape="circle" 
+        coords="337,300,44" 
+        alt="Coffee" 
+        href="coffee.htm"
+    >
+</map>
+<!-- Image map allows multiple links inside one image -->
+
+<hr>
+
+<!-- ================= PICTURE ELEMENT ================= -->
+
+<picture>
+    <!-- Browser picks first supported image -->
+    <source srcset="img_avatar.png">
+    <source srcset="img_girl.jpg">
+
+    <!-- Fallback image -->
+    <img 
+        src="img_beatles.gif" 
+        alt="Beatles"
+        style="width:auto;"
+    >
+</picture>
+<!-- Used for responsive images -->
+
+<hr>
+
+<!-- ================= FAVICON INFO ================= -->
+
+<p>How To Add a Favicon in HTML</p>
+<!-- 
+Favicon is added inside <head> like this:
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+-->
+<pre>
+<b>
+    Anchor Targets
+
+_self → same tab (default)
+
+_blank → new tab
+
+_parent → parent frame
+
+_top → full window
+
+Special Links
+
+mailto: → email
+
+#id → jump link
+
+Image inside <a> → clickable image
+
+Advanced Media
+
+<map> + <area> → image map
+
+<picture> → responsive images
+
+<favicon> → browser tab icon
+</b>
+</pre>
+
+<!-- ================= TABLE START ================= -->
+
+<table>
+    <!-- <caption> : Table title -->
+    <caption>Company Contact Information</caption>
+
+    <!-- <colgroup> : Group of columns for styling -->
+    <colgroup>
+        <col style="background-color: #f9f9f9;">
+        <col style="background-color: #ffffff;">
+        <col style="background-color: #f9f9f9;">
+    </colgroup>
+
+    <!-- <thead> : Table header section -->
+    <thead>
+        <tr>
+            <!-- <th> : Header cell -->
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+    </thead>
+
+    <!-- <tbody> : Main table data -->
+    <tbody>
+        <tr>
+            <!-- <td> : Table data cell -->
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+    </tbody>
+
+    <!-- <tfoot> : Table footer -->
+    <tfoot>
+        <tr>
+            <td colspan="3">
+                Total Companies: 2
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<!-- ================= TABLE END ================= -->
+
+<!-- ================= TABLE BORDERS ================= -->
+
+<p>Table with Borders</p>
+
+<table>
+    <tr>
+        <th class="dotted">Dotted</th>
+        <th class="dashed">Dashed</th>
+        <th class="double">Double</th>
+    </tr>
+    <tr class="row-height">
+        <td class="groove">Groove</td>
+        <td class="ridge">Ridge</td>
+        <td class="inset">Inset</td>
+    </tr>
+</table>
+
+<br>
+
+<!-- ================= TABLE WIDTH & COLUMN WIDTH ================= -->
+
+<p>Table Width & Column Width</p>
+
+<table>
+    <tr>
+        <th class="col-width">Name</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>USA</td>
+    </tr>
+</table>
+
+<br>
+
+<!-- ================= TABLE HEADERS ================= -->
+
+<p>Horizontal Table Headers</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Alice</td>
+        <td>22</td>
+    </tr>
+</table>
+
+<br>
+
+<p>Vertical Table Headers</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <td>Bob</td>
+    </tr>
+    <tr>
+        <th>Country</th>
+        <td>India</td>
+    </tr>
+</table>
+
+<br>
+
+<!-- ================= COLSPAN ================= -->
+
+<p>Table Colspan</p>
+
+<table>
+    <tr>
+        <th colspan="2">Full Name</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+    </tr>
+</table>
+
+<br>
+
+<!-- ================= ROWSPAN ================= -->
+
+<p>Table Rowspan</p>
+
+<table>
+    <tr>
+        <th rowspan="2">Phone</th>
+        <td>123456789</td>
+    </tr>
+    <tr>
+        <td>987654321</td>
+    </tr>
+</table>
+
+<hr>
+
+<!-- ================= HTML LISTS ================= -->
+
+<h2>HTML Lists</h2>
+
+<!-- ===== UNORDERED LIST ===== -->
+<p>Unordered HTML List</p>
+
+<ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+</ul>
+
+<!-- List style types -->
+<ul style="list-style-type: square;">
+    <li>Square Marker</li>
+</ul>
+
+<ul style="list-style-type: circle;">
+    <li>Circle Marker</li>
+</ul>
+
+<!-- ===== ORDERED LIST ===== -->
+<p>Ordered HTML List</p>
+
+<ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+
+<!-- Type attribute -->
+<ol type="A">
+    <li>HTML</li>
+    <li>CSS</li>
+</ol>
+
+<ol type="i">
+    <li>HTML</li>
+    <li>CSS</li>
+</ol>
+
+<!-- ================= DESCRIPTION LIST ================= -->
+
+<p>HTML Description List</p>
+
+<dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets</dd>
+</dl>
+
+<!-- ================= BLOCK ELEMENT ================= -->
+
+<div class="box">
+    This is a DIV (block element)
+</div>
+<!-- div takes full width and starts on new line -->
+
+<!-- ================= INLINE ELEMENT ================= -->
+
+<p>
+    This is a 
+    <span class="highlight">SPAN</span>
+    (inline element)
+</p>
+<!-- span does not break the line -->
+
+<!-- ================= CLASS ATTRIBUTE ================= -->
+
+<div class="box">
+    Using class attribute
+</div>
+
+<div class="box">
+    Same class can be reused
+</div>
+<!-- class can be used multiple times -->
+
+<!-- ================= ID ATTRIBUTE ================= -->
+
+<h2 id="main-title">This is an ID</h2>
+<!-- id must be UNIQUE -->
+
+<!-- ================= CLASS vs ID ================= -->
+<!--
+Class:
+✔ Can be reused
+✔ Used for styling multiple elements
+
+ID:
+✔ Unique
+✔ Used for bookmarks & JavaScript
+-->
+
+<!-- ================= HTML BOOKMARK ================= -->
+
+<a href="#section1">Go to Section 1</a>
+
+<div style="height: 500px;"></div> <!-- space -->
+
+<h3 id="section1">Section 1</h3>
+<!-- id used as bookmark -->
+
+<!-- ================= BUTTONS ================= -->
+
+<h3>HTML Buttons</h3>
+
+<!-- Normal button -->
+<button type="button">
+    Click Me
+</button>
+
+<!-- Submit button -->
+<form>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+
+<!-- Disabled button -->
+<button disabled>
+    Disabled Button
+</button>
+
+<!-- ================= BUTTON TYPES ================= -->
+<!--
+type="button" → Normal button
+type="submit" → Submits form
+type="reset" → Resets form fields
+-->
+
+<!-- ================= IFRAME ================= -->
+
+<h3>HTML Iframe</h3>
+
+<iframe 
+    src="https://www.w3schools.com"
+    width="400"
+    height="250"
+    title="W3Schools Website">
+</iframe>
+<!-- iframe embeds another webpage -->
+<!-- ================================================= -->
+<!-- CLIENT-SIDE SCRIPT -->
+<!-- ================================================= -->
+
+<script>
+    // Client-side script runs in the browser
+    document.write("This text is written using JavaScript");
+</script>
+
+<noscript>
+    <!-- Displayed if browser does NOT support JavaScript -->
+    JavaScript is disabled in your browser.
+</noscript>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- FILE PATH EXAMPLES -->
+<!-- ================================================= -->
+
+<!-- Relative file path -->
+<img src="images/photo.jpg" alt="Relative Path Example">
+
+<!-- Absolute file path -->
+<img src="https://www.example.com/images/photo.jpg" alt="Absolute Path Example">
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML LAYOUT ELEMENTS -->
+<!-- ================================================= -->
+
+<header>
+    Header Section
+</header>
+
+<nav>
+    Navigation Menu
+</nav>
+
+<section>
+    Main Section Content
+</section>
+
+<article>
+    Independent Article Content
+</article>
+
+<aside>
+    Sidebar Content
+</aside>
+
+<footer>
+    Footer Content
+</footer>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- RESPONSIVE WEB DESIGN (HTML PART) -->
+<!-- ================================================= -->
+
+<picture>
+    <source media="(max-width: 600px)" srcset="small.jpg">
+    <source media="(min-width: 601px)" srcset="large.jpg">
+    <img src="default.jpg" alt="Responsive Image">
+</picture>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- COMPUTER CODE ELEMENTS -->
+<!-- ================================================= -->
+
+<p>Inline code: <code>console.log("Hello");</code></p>
+
+<pre>
+<code>
+function greet() {
+    return "Hello World";
+}
+</code>
+</pre>
+
+<p>Sample Output: <samp>Hello World</samp></p>
+
+<p>Keyboard Input: <kbd>Ctrl + C</kbd></p>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- SEMANTIC ELEMENTS -->
+<!-- ================================================= -->
+
+<main>
+    <section>
+        <article>
+            Semantic HTML improves accessibility and SEO.
+        </article>
+    </section>
+</main>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML STYLE GUIDE (BEST PRACTICES) -->
+<!-- ================================================= -->
+
+<!-- Use lowercase tags -->
+<p>Use lowercase HTML tags</p>
+
+<!-- Quote attribute values -->
+<a href="https://www.w3schools.com">W3Schools</a>
+
+<!-- Proper indentation improves readability -->
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML ENTITIES -->
+<!-- ================================================= -->
+
+<p>Less than: &lt;</p>
+<p>Greater than: &gt;</p>
+<p>Ampersand: &amp;</p>
+<p>Copyright: &copy;</p>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML SYMBOLS -->
+<!-- ================================================= -->
+
+<p>Euro: &euro;</p>
+<p>Trademark: &trade;</p>
+<p>Arrow: &rarr;</p>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- USING EMOJIS IN HTML -->
+<!-- ================================================= -->
+
+<p>Emoji using UTF-8 😄 🚀 ❤️</p>
+<p>Emoji entity: &#128512;</p>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML ENCODING -->
+<!-- ================================================= -->
+
+<p>
+HTML Encoding defines how characters are stored and displayed.
+UTF-8 is the recommended encoding.
+</p>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML URL EXAMPLES -->
+<!-- ================================================= -->
+
+<!-- Absolute URL -->
+<a href="https://www.google.com">Google</a>
+
+<!-- Relative URL -->
+<a href="about.html">About Page</a>
+
+<hr>
+
+<!-- ================================================= -->
+<!-- HTML vs XHTML -->
+<!-- ================================================= -->
+
+<p><strong>HTML</strong> is flexible and forgiving.</p>
+<p><strong>XHTML</strong> is strict and XML-based.</p>
+
+<!-- XHTML rules example -->
+<!--
+<img src="image.jpg" alt="Image" />
+<br />
+-->
+
+</body>
+</html>

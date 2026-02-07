@@ -48,3 +48,38 @@ function sum(a, b) {
 
 let total = sum(5, 10); // total is 15
 
+// Default value;
+
+function add (v1 , v2){    //Be default value is set to undedined 
+    console.log(v1+v2);   
+}
+
+add();  //NaN
+
+function add1(v1 = 0 , v2 = 0){  //here we set a default value
+    console.log(v1+v2);
+}
+
+add1();   //0
+add1(1,2);//3
+
+
+// Rest Operator
+// jav arguments kai saare ho to humain utne hi parameter banaane padege , issey bachne ke liya , hum rest a use karta hai agar ... function ke paramter space mein lage to wo rest operator hai 
+function abcd(...val){
+    console.log(val);
+}
+
+abcd(1,2,3,4,5,6,7,8,"Hello");
+
+
+// return variable
+// jaha se aaye ho wahi daal denge
+
+function abcd2(){
+    return 12;
+}
+
+let op = abcd2();
+console.log(abcd2())
+

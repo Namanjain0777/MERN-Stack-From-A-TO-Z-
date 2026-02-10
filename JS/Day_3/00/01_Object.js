@@ -2,6 +2,7 @@
 // They help us store structured data (like a student, a product, or a user profile).
 // Key-Value Structure
 // key can be of any type
+// Singleton
 
 let student = {
     name : "Naman",
@@ -41,3 +42,28 @@ console.log(name , age);
 let {city , pincode} = user.address;
 console.log(city , pincode)
 
+let jsUser = {
+    name: "Naman",
+    email: "naman@gmail.com",
+    isLoggedIn: false
+}
+
+jsUser.email = "ballaballa@gmail.com";
+console.log(jsUser);
+jsUser.greeting = function() {
+    console.log("Hello");
+}
+console.log(jsUser);
+// console.log(jsUser.greeting);   //[Function (anonymous)]
+console.log(jsUser.greeting());  //Hello and undefined
+// why undefined? because function doesn't return anything
+// but it prints Hello because console.log is inside the function
+
+jsUser.greetingTwo = function() {
+    console.log(`Hello ${this.name}`);
+}
+console.log(jsUser.greetingTwo());
+
+// Object.freeze(student)
+// student.name = "Balla balla";
+// console.log(student)

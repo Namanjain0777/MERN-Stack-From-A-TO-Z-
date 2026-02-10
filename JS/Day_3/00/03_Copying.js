@@ -38,3 +38,30 @@ user2.address.city = "Noida";
 console.log(user2)
 console.log(user)
 
+
+const user2 = {
+  name: "Naman"
+};
+
+const { name, city = "Delhi" } = user2;
+
+console.log(city); // Delhi
+
+// Destructuring in Function Parameters
+const printUser = ({ name, age }) => {
+  console.log(name, age);
+};
+
+printUser({ name: "Naman", age: 22 });
+
+// Destructure with Rest Operator
+const user3 = {
+  name: "Naman",
+  age: 22,
+  city: "Jaipur"
+};
+
+const { name3, ...rest } = user3;
+
+console.log(name3); // Naman
+console.log(rest); // { age: 22, city: "Jaipur" }

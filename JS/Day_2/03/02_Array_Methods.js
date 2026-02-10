@@ -45,3 +45,11 @@ console.log(asc); // [3, 4, 11, 25, 62]
 // splice changes original array, slice does not
 // forEach vs map : map returns a new array
 // sort() converts values to strings unless compareFn is provided:
+
+
+// .flat
+// Arrays.isArray("Naman")
+// Array.from("Naman")
+// Array.from({name:"Naman"})  //interesting
+// Array.of(score1 , score2, score3);
+// 

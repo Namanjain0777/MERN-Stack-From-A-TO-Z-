@@ -1,3 +1,5 @@
+"use strict"; // treat all js code as newer version
+
 // JavaScript was originally named Mocha.
 // It was created in 1995 by Brendan Eich at Netscape.
 // The name changed from Mocha → LiveScript → JavaScript.

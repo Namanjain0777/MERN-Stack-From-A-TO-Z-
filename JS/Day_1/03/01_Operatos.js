@@ -78,3 +78,15 @@ console.log(result);
 
 // Syntax:
 // condition ? value_if_true : value_if_false
+
+
+
+
+
+
+
+
+const min = 10;
+const max = 20;
+const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+console.log(randomNum);

@@ -89,3 +89,5 @@ console.log(discount);
 // ❌ Avoid var
 // ✅ Use let when value changes
 // ✅ Use const by default
+
+    

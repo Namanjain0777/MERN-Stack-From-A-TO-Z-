@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List With DOM</title>
+</head>
+<body>
+    <h1>To-Do List With DOM</h1>
+    <input type="text" id="task">
+    <button id="add">Add Task</button>
+    <ul id="taskList"></ul>
+    <script>
+        const task = document.getElementById("task");
+        const add = document.getElementById("add");
+        const taskList = document.getElementById("taskList");
+
+        add.addEventListener("click", () =>{
+            const li = document.createElement("li");
+            li.textContent = task.value;
+            taskList.appendChild(li);
+            task.value = "";
+            const bt = document.createElement("button");
+            bt.textContent = "delete";
+            li.appendChild(bt);
+            bt.addEventListener("click", () => {
+                li.remove();
+            })
+        })
+
+    </script>
+</body>
+</html>

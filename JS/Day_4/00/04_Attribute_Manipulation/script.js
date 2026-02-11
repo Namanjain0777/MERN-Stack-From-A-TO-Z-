@@ -1,2 +1,0 @@
-// getAttribute , setAttribute , removeAttribute
-

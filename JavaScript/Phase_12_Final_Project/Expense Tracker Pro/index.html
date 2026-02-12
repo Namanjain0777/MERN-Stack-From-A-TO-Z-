@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Expense Tracker Pro</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.container {
+    width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, select, button {
+    padding: 6px;
+    margin: 4px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    margin-top: 6px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+.income {
+    border-left: 5px solid green;
+}
+
+.expense {
+    border-left: 5px solid red;
+}
+
+.summary {
+    margin-top: 10px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Expense Tracker Pro</h2>
+
+    <input type="text" id="desc" placeholder="Description">
+    <input type="number" id="amount" placeholder="Amount">
+    <input type="date" id="date">
+    
+    <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+
+    <button id="addBtn">Add Transaction</button>
+
+    <br><br>
+
+    <select id="filter">
+        <option value="all">All</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+
+    <ul id="list"></ul>
+
+    <div class="summary">
+        Balance: ₹<span id="balance">0</span>
+    </div>
+
+    <canvas id="chart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

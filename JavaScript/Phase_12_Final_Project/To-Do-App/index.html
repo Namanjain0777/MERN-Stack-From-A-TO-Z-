@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Todo Pro</title>
+
+<style>
+:root {
+    --bg: #f4f4f4;
+    --card: white;
+    --text: black;
+}
+
+.dark {
+    --bg: #1e1e1e;
+    --card: #2c2c2c;
+    --text: white;
+}
+
+body {
+    font-family: Arial;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    transition: 0.3s;
+}
+
+.container {
+    background: var(--card);
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+input, select {
+    padding: 6px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 6px 8px;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #ddd;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+
+.filters {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Smart Todo Pro</h2>
+
+    <input type="text" id="taskInput" placeholder="Task">
+    <input type="date" id="dueDate">
+    <button id="addBtn">Add</button>
+
+    <div class="filters">
+        <select id="filter">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="pending">Pending</option>
+        </select>
+        <button id="darkModeToggle">🌙</button>
+    </div>
+
+    <ul id="taskList"></ul>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+
+# ES Modules (ESM)
+
+ES Modules are the **modern JavaScript module system**.
+
+Used in:
+
+* React
+* Frontend JS
+* Modern Node.js
+* TypeScript
+
+---
+
+# 🔥 CommonJS vs ES Modules
+
+### CommonJS (Old Node way)
+
+```js
+const math = require("./math");
+module.exports = something;
+```
+
+### ES Modules (Modern way)
+
+```js
+import math from "./math.js";
+export default something;
+```
+
+---
+
+# 🚀 How to Enable ES Modules in Node
+
+By default, Node uses CommonJS.
+
+To use ES Modules:
+
+Open `package.json` and add:
+
+```json
+{
+  "type": "module"
+}
+```
+
+⚠️ VERY IMPORTANT:
+When using ES modules:
+
+* You must write `.js` extension in import
+* No require()
+* No module.exports
+
+---
+
+# 1️⃣ `export`
+
+Used to export values from a file.
+
+---
+
+## 🔹 Named Export
+
+### math.js
+
+```js
+export function add(a, b) {
+  return a + b;
+}
+
+export function subtract(a, b) {
+  return a - b;
+}
+```
+
+---
+
+### app.js
+
+```js
+import { add, subtract } from "./math.js";
+
+console.log(add(10, 5));
+```
+
+🔥 This is clean and modern.
+
+---
+
+# 2️⃣ Export Variables
+
+```js
+export const name = "Naman";
+export const age = 21;
+```
+
+Import:
+
+```js
+import { name, age } from "./file.js";
+```
+
+---
+
+# 3️⃣ Default Export
+
+If you want to export ONE main thing:
+
+### math.js
+
+```js
+export default function multiply(a, b) {
+  return a * b;
+}
+```
+
+Import:
+
+```js
+import multiply from "./math.js";
+
+console.log(multiply(2, 3));
+```
+
+---
+
+# 🆚 Named vs Default Export
+
+| Named Export             | Default Export |
+| ------------------------ | -------------- |
+| Can export many          | Only one       |
+| Must use same name       | Can rename     |
+| Use `{}` while importing | No `{}`        |
+
+---
+
+# 4️⃣ Rename While Importing
+
+```js
+import { add as sum } from "./math.js";
+```
+
+Now use:
+
+```js
+sum(2, 3);
+```
+
+---
+
+# ⚠️ Important Rules in ES Modules
+
+1. Must use file extension:
+
+```js
+import x from "./file.js"; ✅
+import x from "./file"; ❌
+```
+
+2. No require()
+
+3. No module.exports
+
+4. No __dirname directly (needs workaround)
+
+---
+
+# 🔥 Real Backend Example (ESM)
+
+### app.js
+
+```js
+import express from "express";
+
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Server running 🚀");
+});
+
+app.listen(3000, () => {
+  console.log("Server started");
+});
+```
+
+Notice:
+
+* No require()
+* Clean modern syntax
+
+---
+
+# 🧠 Interview Ready Answers
+
+### ❓ What are ES Modules?
+
+Modern JavaScript module system using import/export.
+
+### ❓ How to enable ES Modules in Node?
+
+Add `"type": "module"` in package.json.
+
+### ❓ Difference between named & default export?
+
+Named → multiple exports
+Default → single main export
+
+### ❓ Can we mix require and import?
+
+Not recommended. Choose one system.
+
+---
+
+# 💡 When to Use ES Modules?
+
+In 2026 → Always use ES Modules for new projects.
+
+CommonJS is older but still widely used.
+
+Since you’re learning modern backend → Start using ESM 💪
+
+---
